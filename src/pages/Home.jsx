@@ -78,7 +78,7 @@ export default function Home() {
               data-testid="hero-image"
             >
               <img
-                src="/assets/cover page.png"
+                src="/assets/cover-page.png"
                 alt="Onenex"
                 className="w-full h-auto object-contain block"
               />
