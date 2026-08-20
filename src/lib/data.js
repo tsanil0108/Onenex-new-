@@ -17,7 +17,7 @@ export const SERVICES = [
       "Content Systems",
     ],
     image:
-      "https://images.unsplash.com/photo-1653463174496-bf1a18f8f3b5?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1653463174496-bf1a18f8f3b5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGFnZW5jeSUyMG9mZmljZSUyMHdvcmtzcGFjZXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3ODQ5Nzc1NjB8MA&ixlib=rb-4.1.0&q=85",
   },
   {
     slug: "identity-brand-book",
@@ -35,7 +35,7 @@ export const SERVICES = [
       "Voice & Tone",
     ],
     image:
-      "https://images.unsplash.com/photo-1695634281254-e94a29d234c0?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1695634281254-e94a29d234c0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxicmFuZGluZyUyMHBhY2thZ2luZyUyMG1vY2t1cCUyMG1pbmltYWx8ZW58MHx8fHwxNzg0OTc3NTYwfDA&ixlib=rb-4.1.0&q=85",
   },
   {
     slug: "branding",
@@ -53,7 +53,7 @@ export const SERVICES = [
       "Messaging",
     ],
     image:
-      "https://images.unsplash.com/photo-1595246007497-15e0ed4b8d96?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1595246007497-15e0ed4b8d96?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxicmFuZGluZyUyMHBhY2thZ2luZyUyMG1vY2t1cCUyMG1pbmltYWx8ZW58MHx8fHwxNzg0OTc3NTYwfDA&ixlib=rb-4.1.0&q=85",
   },
   {
     slug: "digital-marketing",
@@ -71,7 +71,7 @@ export const SERVICES = [
       "Funnel Design",
     ],
     image:
-      "https://images.unsplash.com/photo-1654780345432-79b8bf62def8?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1654780345432-79b8bf62def8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwyfHxjcmVhdGl2ZSUyMGFnZW5jeSUyMG9mZmljZSUyMHdvcmtzcGFjZXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3ODQ5Nzc1NjB8MA&ixlib=rb-4.1.0&q=85",
   },
   {
     slug: "website-development",
@@ -89,7 +89,7 @@ export const SERVICES = [
       "Performance",
     ],
     image:
-      "https://images.unsplash.com/photo-1487014679447-9f8336841d58?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1487014679447-9f8336841d58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwYWdlbmN5JTIwd2Vic2l0ZSUyMG1vY2t1cHxlbnwwfHx8fDE3ODQ5Nzc1NjB8MA&ixlib=rb-4.1.0&q=85",
   },
   {
     slug: "corporate-identity",
@@ -107,7 +107,7 @@ export const SERVICES = [
       "Rollout Kits",
     ],
     image:
-      "https://images.unsplash.com/photo-1698376620976-6a1f258d844b?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1698376620976-6a1f258d844b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxicmFuZGluZyUyMHBhY2thZ2luZyUyMG1vY2t1cCUyMG1pbmltYWx8ZW58MHx8fHwxNzg0OTc3NTYwfDA&ixlib=rb-4.1.0&q=85",
   },
 ];
 
@@ -121,13 +121,13 @@ export const TEAM = [
     name: "Isha Kapoor",
     role: "Head of Brand Strategy",
     image:
-      "https://images.unsplash.com/photo-1558531304-a4773b7e3a9c?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1558531304-a4773b7e3a9c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGhlYWRzaG90fGVufDB8fHxibGFja19hbmRfd2hpdGV8MTc4NDk3NzU2MHww&ixlib=rb-4.1.0&q=85",
   },
   {
     name: "Rohan Verma",
     role: "Design Lead",
     image:
-      "https://images.unsplash.com/photo-1506863530036-1efeddceb993?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1506863530036-1efeddceb993?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGhlYWRzaG90fGVufDB8fHxibGFja19hbmRfd2hpdGV8MTc4NDk3NzU2MHww&ixlib=rb-4.1.0&q=85",
   },
   {
     name: "Neha Sharma",
@@ -139,7 +139,7 @@ export const TEAM = [
     name: "Kabir Singh",
     role: "Digital Marketing Head",
     image:
-      "https://images.unsplash.com/photo-1504257432389-52343af06ae3?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1504257432389-52343af06ae3?crop=entropy&cs=srgb&fm=jpg",
   },
   {
     name: "Ananya Rao",
@@ -156,17 +156,17 @@ export const TEAM = [
   {
     name: "Vivek Vishwakarma",
     role: "Digital Marketing",
-    image: null,
+    image: "",
   },
   {
     name: "Anil Thakur",
     role: "Software Developer",
-    image: null,
+    image: "",
   },
   {
     name: "Harsh Dubey",
     role: "Full Stack Developer",
-    image: null,
+    image: "",
   },
 ];
 
@@ -176,28 +176,28 @@ export const PORTFOLIO = [
     category: "Identity & Print",
     year: "2025",
     image:
-      "https://images.unsplash.com/photo-1695634281254-e94a29d234c0?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1695634281254-e94a29d234c0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxicmFuZGluZyUyMHBhY2thZ2luZyUyMG1vY2t1cCUyMG1pbmltYWx8ZW58MHx8fHwxNzg0OTc3NTYwfDA&ixlib=rb-4.1.0&q=85",
   },
   {
     title: "Nord Coffee Co.",
     category: "Branding",
     year: "2025",
     image:
-      "https://images.unsplash.com/photo-1595246007497-15e0ed4b8d96?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1595246007497-15e0ed4b8d96?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxicmFuZGluZyUyMHBhY2thZ2luZyUyMG1vY2t1cCUyMG1pbmltYWx8ZW58MHx8fHwxNzg0OTc3NTYwfDA&ixlib=rb-4.1.0&q=85",
   },
   {
     title: "Atlas Studio",
     category: "Corporate Identity",
     year: "2024",
     image:
-      "https://images.unsplash.com/photo-1698376620976-6a1f258d844b?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1698376620976-6a1f258d844b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHxicmFuZGluZyUyMHBhY2thZ2luZyUyMG1vY2t1cCUyMG1pbmltYWx8ZW58MHx8fHwxNzg0OTc3NTYwfDA&ixlib=rb-4.1.0&q=85",
   },
   {
     title: "Maison Blanc",
     category: "Packaging",
     year: "2024",
     image:
-      "https://images.unsplash.com/photo-1695634281181-b2357af34c61?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1695634281181-b2357af34c61?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxicmFuZGluZyUyMHBhY2thZ2luZyUyMG1vY2t1cCUyMG1pbmltYWx8ZW58MHx8fHwxNzg0OTc3NTYwfDA&ixlib=rb-4.1.0&q=85",
   },
   {
     title: "Vertex Labs",
@@ -216,48 +216,36 @@ export const PORTFOLIO = [
 ];
 
 export const STATS = [
-  {
-    value: 12,
-    suffix: "+",
-    label: "Years of industry experience",
-  },
-  {
-    value: 240,
-    suffix: "+",
-    label: "Brands elevated to date",
-  },
-  {
-    value: 98,
-    suffix: "%",
-    label: "Client retention rate",
-  },
-  {
-    value: 30,
-    suffix: "+",
-    label: "Design awards won",
-  },
+  { value: 12, suffix: "+", label: "Years of industry experience" },
+  { value: 240, suffix: "+", label: "Brands elevated to date" },
+  { value: 98, suffix: "%", label: "Client retention rate" },
+  { value: 30, suffix: "+", label: "Design awards won" },
 ];
 
 export const PROCESS = [
   {
     no: "01",
     title: "Discover",
-    text: "We dig into your market, audience and ambitions to define the problem worth solving.",
+    text:
+      "We dig into your market, audience and ambitions to define the problem worth solving.",
   },
   {
     no: "02",
     title: "Define",
-    text: "Strategy and positioning turn insight into a sharp, ownable brand direction.",
+    text:
+      "Strategy and positioning turn insight into a sharp, ownable brand direction.",
   },
   {
     no: "03",
     title: "Design",
-    text: "We craft the identity, systems and experiences — obsessing over every detail.",
+    text:
+      "We craft the identity, systems and experiences — obsessing over every detail.",
   },
   {
     no: "04",
     title: "Deliver",
-    text: "From print to pixels, we ship, launch and support your brand into the world.",
+    text:
+      "From print to pixels, we ship, launch and support your brand into the world.",
   },
 ];
 
@@ -303,11 +291,8 @@ export const CONTACT = {
       tel: "+917738866969",
     },
   ],
-
   email: "onenex.in@gmail.com",
-
   city: "Thane West, Maharashtra",
-
   address:
     "Onenex Branding Agency, Ganesh Tower, Office No. 25, above Global Print, Near Laxmi Digital Printers & Solution Pvt Ltd, Dada Patil Wadi, Naupada, Thane West, Maharashtra 400602",
 };
