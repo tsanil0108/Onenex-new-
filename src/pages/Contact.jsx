@@ -19,7 +19,13 @@ const SOCIAL_ICONS = {
 
 const WEB3FORMS_KEY = "5c3edaf5-4340-4e20-96fc-170945873f79";
 
-const BUDGETS = ["< ₹1L", "₹1L – ₹5L", "₹5L – ₹15L", "₹15L +"];
+const BUDGETS = [
+  "₹10K – ₹25K",
+  "₹25K – ₹50K",
+  "₹50K – ₹1L",
+  "₹1L – ₹2.5L",
+  "₹2.5L – ₹5L",
+];
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -93,21 +99,60 @@ export default function Contact() {
   };
 
   const inputCls =
-    "w-full bg-transparent border-b border-white/20 py-3.5 font-body text-[16px] md:text-[17px] text-white placeholder-white/35 focus:border-[#FF9D00] focus:outline-none transition-colors duration-300";
+    "w-full bg-transparent border-b border-white/20 py-3.5 sm:py-4 font-body text-[15px] sm:text-[16px] md:text-[17px] text-white placeholder-white/35 focus:border-[#FF9D00] focus:outline-none transition-colors duration-300";
 
   return (
     <div
-      className="pt-28 md:pt-36 lg:pt-40 pb-20 min-h-screen"
+      className="
+        min-h-screen
+        pt-28
+        sm:pt-32
+        md:pt-36
+        lg:pt-40
+        pb-16
+        sm:pb-20
+        overflow-hidden
+      "
       data-testid="contact-page"
     >
-      <section className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-14 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 xl:gap-24 items-start">
+      <section
+        className="
+          max-w-[1500px]
+          mx-auto
+          px-5
+          sm:px-7
+          md:px-10
+          lg:px-14
+          grid
+          lg:grid-cols-[0.9fr_1.1fr]
+          gap-12
+          sm:gap-14
+          lg:gap-20
+          xl:gap-24
+          items-start
+        "
+      >
         {/* LEFT */}
         <div>
-          <p className="font-heading text-sm uppercase tracking-[0.3em] text-[#FF9D00] mb-6">
-            / Contact
-          </p>
+          <Reveal>
+            <p className="font-heading text-xs sm:text-sm uppercase tracking-[0.3em] text-[#FF9D00] mb-5 sm:mb-6">
+              Contact
+            </p>
+          </Reveal>
 
-          <h1 className="font-display text-[18vw] sm:text-[14vw] md:text-[11vw] lg:text-[7.2vw] xl:text-[6.5vw] uppercase leading-[0.82] tracking-[-0.03em]">
+          <h1
+            className="
+              font-display
+              text-[18vw]
+              sm:text-[14vw]
+              md:text-[11vw]
+              lg:text-[7.2vw]
+              xl:text-[6.5vw]
+              uppercase
+              leading-[0.82]
+              tracking-[-0.03em]
+            "
+          >
             <MaskedLinesInView
               lines={["Say", "Hello"]}
               lineClassName="text-white"
@@ -115,16 +160,27 @@ export default function Contact() {
           </h1>
 
           <Reveal delay={0.2}>
-            <div className="mt-10 space-y-7">
+            <div className="mt-8 sm:mt-10 space-y-7 sm:space-y-8">
               {/* Email */}
               <div>
-                <p className="font-heading text-xs uppercase tracking-widest text-white/40 mb-2">
+                <p className="font-heading text-[10px] sm:text-xs uppercase tracking-widest text-white/40 mb-2">
                   Email
                 </p>
 
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="font-heading text-xl md:text-2xl lg:text-[26px] text-white link-underline"
+                  className="
+                    font-heading
+                    text-lg
+                    sm:text-xl
+                    md:text-2xl
+                    lg:text-[26px]
+                    text-white
+                    hover:text-[#FF9D00]
+                    transition-colors
+                    duration-300
+                    break-all
+                  "
                   data-testid="contact-email"
                 >
                   {CONTACT.email}
@@ -133,7 +189,7 @@ export default function Contact() {
 
               {/* Phone */}
               <div>
-                <p className="font-heading text-xs uppercase tracking-widest text-white/40 mb-2">
+                <p className="font-heading text-[10px] sm:text-xs uppercase tracking-widest text-white/40 mb-2">
                   Phone
                 </p>
 
@@ -142,7 +198,18 @@ export default function Contact() {
                     <a
                       key={p.tel}
                       href={`tel:${p.tel}`}
-                      className="font-heading text-xl md:text-2xl lg:text-[26px] text-white link-underline"
+                      className="
+                        font-heading
+                        text-lg
+                        sm:text-xl
+                        md:text-2xl
+                        lg:text-[26px]
+                        text-white
+                        hover:text-[#FF9D00]
+                        transition-colors
+                        duration-300
+                        w-fit
+                      "
                       data-testid={`contact-phone-${p.tel}`}
                     >
                       {p.display}
@@ -153,12 +220,20 @@ export default function Contact() {
 
               {/* Studio */}
               <div>
-                <p className="font-heading text-xs uppercase tracking-widest text-white/40 mb-2">
+                <p className="font-heading text-[10px] sm:text-xs uppercase tracking-widest text-white/40 mb-2">
                   Studio
                 </p>
 
                 <p
-                  className="font-body text-white/65 text-base md:text-[17px] max-w-md leading-relaxed"
+                  className="
+                    font-body
+                    text-white/65
+                    text-sm
+                    sm:text-base
+                    md:text-[17px]
+                    max-w-md
+                    leading-relaxed
+                  "
                   data-testid="contact-address"
                 >
                   {CONTACT.address}
@@ -167,11 +242,11 @@ export default function Contact() {
 
               {/* Socials */}
               <div>
-                <p className="font-heading text-xs uppercase tracking-widest text-white/40 mb-3">
+                <p className="font-heading text-[10px] sm:text-xs uppercase tracking-widest text-white/40 mb-3">
                   Follow
                 </p>
 
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   {SOCIALS.map((social) => {
                     const SocialIcon = SOCIAL_ICONS[social.label];
 
@@ -185,9 +260,27 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         aria-label={social.label}
                         data-testid={`contact-social-${social.label.toLowerCase()}`}
-                        className="w-11 h-11 border border-white/20 rounded-full flex items-center justify-center text-white/70 hover:bg-[#FF9D00] hover:text-[#0A0A0A] hover:border-[#FF9D00] hover:-translate-y-1 transition-all duration-300"
+                        className="
+                          w-10
+                          h-10
+                          sm:w-11
+                          sm:h-11
+                          border
+                          border-white/20
+                          rounded-full
+                          flex
+                          items-center
+                          justify-center
+                          text-white/70
+                          hover:bg-[#FF9D00]
+                          hover:text-[#0A0A0A]
+                          hover:border-[#FF9D00]
+                          hover:-translate-y-1
+                          transition-all
+                          duration-300
+                        "
                       >
-                        <SocialIcon className="w-5 h-5" />
+                        <SocialIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                       </a>
                     );
                   })}
@@ -202,11 +295,11 @@ export default function Contact() {
           <Reveal delay={0.1}>
             <form
               onSubmit={submit}
-              className="space-y-7"
+              className="space-y-6 sm:space-y-7"
               data-testid="contact-form"
             >
               {/* Name + Email */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-5 sm:gap-6">
                 <input
                   data-testid="input-name"
                   type="text"
@@ -240,11 +333,11 @@ export default function Contact() {
 
               {/* Budget */}
               <div>
-                <p className="font-heading text-xs uppercase tracking-widest text-white/40 mb-4">
+                <p className="font-heading text-[10px] sm:text-xs uppercase tracking-widest text-white/40 mb-4">
                   Project Budget
                 </p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2.5 sm:gap-3">
                   {BUDGETS.map((budget) => (
                     <button
                       type="button"
@@ -255,15 +348,24 @@ export default function Contact() {
                           budget,
                         }))
                       }
-                      data-testid={`budget-${budget.replace(
-                        /[^a-zA-Z0-9]+/g,
-                        "-"
-                      )}`}
-                      className={`px-5 py-2.5 font-body text-sm border rounded-full transition-all duration-300 ${
-                        form.budget === budget
-                          ? "bg-[#FF9D00] text-[#0A0A0A] border-[#FF9D00]"
-                          : "border-white/20 text-white/60 hover:border-[#FF9D00] hover:text-white"
-                      }`}
+                      className={`
+                        px-4
+                        sm:px-5
+                        py-2
+                        sm:py-2.5
+                        font-body
+                        text-xs
+                        sm:text-sm
+                        border
+                        rounded-full
+                        transition-all
+                        duration-300
+                        ${
+                          form.budget === budget
+                            ? "bg-[#FF9D00] text-[#0A0A0A] border-[#FF9D00]"
+                            : "border-white/20 text-white/60 hover:border-[#FF9D00] hover:text-white"
+                        }
+                      `}
                     >
                       {budget}
                     </button>
@@ -275,7 +377,7 @@ export default function Contact() {
               <textarea
                 data-testid="input-message"
                 rows={4}
-                className={`${inputCls} resize-none min-h-[150px]`}
+                className={`${inputCls} resize-none min-h-[130px] sm:min-h-[150px]`}
                 placeholder="Tell us about your project *"
                 value={form.message}
                 onChange={update("message")}
@@ -287,7 +389,33 @@ export default function Contact() {
                 type="submit"
                 disabled={loading}
                 data-testid="contact-submit"
-                className="w-full min-h-[60px] inline-flex items-center justify-center gap-3 bg-[#FF9D00] text-[#0A0A0A] px-8 py-4 font-heading text-sm uppercase tracking-[0.14em] font-semibold hover:bg-white hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                className="
+                  w-full
+                  min-h-[56px]
+                  sm:min-h-[60px]
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-3
+                  bg-[#FF9D00]
+                  text-[#0A0A0A]
+                  px-6
+                  sm:px-8
+                  py-4
+                  font-heading
+                  text-xs
+                  sm:text-sm
+                  uppercase
+                  tracking-[0.14em]
+                  font-semibold
+                  hover:bg-white
+                  hover:-translate-y-0.5
+                  transition-all
+                  duration-300
+                  disabled:opacity-60
+                  disabled:cursor-not-allowed
+                  disabled:hover:translate-y-0
+                "
               >
                 {loading ? (
                   <>

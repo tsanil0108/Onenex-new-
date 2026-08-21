@@ -114,44 +114,44 @@ export const SERVICES = [
 export const TEAM = [
   {
     name: "Arvind Vishwakarma",
-    role: "Founder & Principal Designer · Visualizer & Creator",
+    role: "Founder & Creative Director · Brand Strategy • Creative Direction • Video Productionr",
     image: "/assets/arvind.png",
   },
   {
-    name: "Isha Kapoor",
-    role: "Head of Brand Strategy",
+    name: "Khushbu Vishwakarma",
+    role: "Accounts & Creative Executive",
     image:
-      "https://images.unsplash.com/photo-1558531304-a4773b7e3a9c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGhlYWRzaG90fGVufDB8fHxibGFja19hbmRfd2hpdGV8MTc4NDk3NzU2MHww&ixlib=rb-4.1.0&q=85",
+      "/assets/Khushbu.png",
   },
   {
-    name: "Rohan Verma",
-    role: "Design Lead",
+    name: "Manoj Yadav",
+    role: "Senior Graphic Designer & Visualizer",
     image:
-      "https://images.unsplash.com/photo-1506863530036-1efeddceb993?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGhlYWRzaG90fGVufDB8fHxibGFja19hbmRfd2hpdGV8MTc4NDk3NzU2MHww&ixlib=rb-4.1.0&q=85",
+      "/assets/ManojYadav.png",
   },
   {
-    name: "Neha Sharma",
-    role: "Art Director",
+    name: "Pramod Chinchulkar",
+    role: "Graphic Designer & Visualizer",
     image:
-      "https://images.pexels.com/photos/29852852/pexels-photo-29852852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "/assets/Pramod Chinchulkar.png",
   },
   {
-    name: "Kabir Singh",
-    role: "Digital Marketing Head",
+    name: "Chandrabhan Singh",
+    role: "Business Development & Marketing Head",
     image:
-      "https://images.unsplash.com/photo-1504257432389-52343af06ae3?crop=entropy&cs=srgb&fm=jpg",
+      "/assets/Chandrabhan Singh.png",
   },
   {
-    name: "Ananya Rao",
-    role: "Lead Developer",
+    name: "Vivek Ninave",
+    role: "Interior Designer & 3D Visualizer",
     image:
-      "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "/assets/Vivek Ninave.png",
   },
   {
-    name: "Vikram Nair",
-    role: "Print & Production Manager",
+    name: "Arvind Chaudhari",
+    role: "Interior Designer & 3D Visualize",
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=srgb&fm=jpg",
+      "/assets/Arvind Chaudhari.png",
   },
   {
     name: "Vivek Vishwakarma",
