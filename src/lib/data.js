@@ -112,12 +112,12 @@ export const SERVICES = [
 ];
 
 export const TEAM = [
-  {
-    
-    role: "Founder & Creative Director | Brand Strategy • Creative Direction • Video Productionr",
-    image: "/assets/arvind.png",
-    name: "Arvind Vishwakarma",
-  },
+{
+  name: "Arvind Vishwakarma",
+  role: "Founder & Creative Director",
+  expertise: "Brand Strategy • Creative Direction • Video Production",
+  image: "/assets/arvind.png",
+},
   {
     name: "Khushbu Vishwakarma",
     role: "Accounts & Creative Executive",
