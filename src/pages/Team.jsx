@@ -11,7 +11,9 @@ export default function Team() {
       className="pt-28 sm:pt-32 md:pt-40 pb-16 md:pb-24"
       data-testid="team-page"
     >
-      {/* HERO */}
+      {/* =========================
+          HERO
+      ========================== */}
       <section className="max-w-[1600px] mx-auto px-5 sm:px-7 md:px-10 lg:px-12">
         <Reveal>
           <p className="font-heading text-xs sm:text-sm uppercase tracking-[0.3em] text-[#FF9D00] mb-5 md:mb-6">
@@ -45,7 +47,9 @@ export default function Team() {
         </Reveal>
       </section>
 
-      {/* TEAM GRID */}
+      {/* =========================
+          TEAM GRID
+      ========================== */}
       <section
         className="
           max-w-[1600px]
@@ -70,6 +74,8 @@ export default function Team() {
           const hasImage =
             typeof member.image === "string" &&
             member.image.trim().length > 0;
+
+          const isArvind = member.name === "Arvind Vishwakarma";
 
           return (
             <Reveal
@@ -115,7 +121,9 @@ export default function Team() {
                 "
                 data-testid={`team-member-${index}`}
               >
-                {/* IMAGE AVAILABLE */}
+                {/* =========================
+                    IMAGE AVAILABLE
+                ========================== */}
                 {hasImage ? (
                   <motion.img
                     src={member.image}
@@ -141,7 +149,9 @@ export default function Team() {
                     }}
                   />
                 ) : (
-                  /* NO IMAGE */
+                  /* =========================
+                      NO IMAGE
+                  ========================== */
                   <div
                     className="
                       absolute
@@ -155,7 +165,7 @@ export default function Team() {
                       to-[#050505]
                     "
                   >
-                    {/* Big background initial */}
+                    {/* Big Background Initial */}
                     <span
                       className="
                         absolute
@@ -237,7 +247,9 @@ export default function Team() {
                   </div>
                 )}
 
-                {/* Gradient Overlay */}
+                {/* =========================
+                    GRADIENT OVERLAY
+                ========================== */}
                 <div
                   className="
                     absolute
@@ -250,7 +262,9 @@ export default function Team() {
                   "
                 />
 
-                {/* Number */}
+                {/* =========================
+                    NUMBER
+                ========================== */}
                 <div
                   className="
                     absolute
@@ -266,7 +280,9 @@ export default function Team() {
                   {String(index + 1).padStart(2, "0")}
                 </div>
 
-                {/* Member Details */}
+                {/* =========================
+                    MEMBER DETAILS
+                ========================== */}
                 <div
                   className="
                     absolute
@@ -279,6 +295,7 @@ export default function Team() {
                     md:p-7
                   "
                 >
+                  {/* Yellow Line */}
                   <div
                     className="
                       h-[2px]
@@ -293,38 +310,80 @@ export default function Team() {
                     "
                   />
 
-                  <h3
-                    className="
-                      font-heading
-                      text-xl
-                      md:text-2xl
-                      font-semibold
-                      text-white
-                      leading-tight
-                    "
-                  >
-                    {member.name}
-                  </h3>
+                  {/* =========================
+                      ONLY ARVIND:
+                      ROLE FIRST → NAME BELOW
+                  ========================== */}
+                  {isArvind ? (
+                    <>
+                      <p
+                        className="
+                          font-body
+                          text-[#FF9D00]
+                          text-xs
+                          sm:text-sm
+                          leading-relaxed
+                          mb-2
+                        "
+                      >
+                        {member.role}
+                      </p>
 
-                  <p
-                    className="
-                      font-body
-                      text-[#FF9D00]
-                      text-xs
-                      sm:text-sm
-                      mt-2
-                      leading-relaxed
-                    "
-                  >
-                    {member.role}
-                  </p>
+                      <h3
+                        className="
+                          font-heading
+                          text-xl
+                          md:text-2xl
+                          font-semibold
+                          text-white
+                          leading-tight
+                        "
+                      >
+                        {member.name}
+                      </h3>
+                    </>
+                  ) : (
+                    <>
+                      {/* =========================
+                          ALL OTHER MEMBERS:
+                          NAME FIRST → ROLE BELOW
+                      ========================== */}
+                      <h3
+                        className="
+                          font-heading
+                          text-xl
+                          md:text-2xl
+                          font-semibold
+                          text-white
+                          leading-tight
+                        "
+                      >
+                        {member.name}
+                      </h3>
+
+                      <p
+                        className="
+                          font-body
+                          text-[#FF9D00]
+                          text-xs
+                          sm:text-sm
+                          mt-2
+                          leading-relaxed
+                        "
+                      >
+                        {member.role}
+                      </p>
+                    </>
+                  )}
                 </div>
               </motion.div>
             </Reveal>
           );
         })}
 
-        {/* JOIN CARD */}
+        {/* =========================
+            JOIN CARD
+        ========================== */}
         <Reveal delay={0.15}>
           <motion.a
             href="/contact"
@@ -375,6 +434,7 @@ export default function Team() {
               / Careers
             </span>
 
+            {/* Circle Animation */}
             <div
               className="
                 absolute
