@@ -6,12 +6,25 @@ import { TEAM } from "../lib/data";
 const CARD_EASE = [0.22, 1, 0.36, 1];
 
 export default function Team() {
+  // Open member portfolio/link only when link exists
+  const openMemberLink = (member) => {
+    if (!member.link) return;
+
+    window.open(
+      member.link,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   return (
     <div
       className="pt-28 sm:pt-32 md:pt-40 pb-28 md:pb-36 overflow-visible"
       data-testid="team-page"
     >
-      {/* HERO */}
+      {/* =========================
+          HERO SECTION
+      ========================== */}
       <section className="max-w-[1600px] mx-auto px-5 sm:px-7 md:px-10 lg:px-12">
         <Reveal>
           <p className="font-heading text-xs sm:text-sm uppercase tracking-[0.3em] text-[#FF9D00] mb-5 md:mb-6">
@@ -45,7 +58,9 @@ export default function Team() {
         </Reveal>
       </section>
 
-      {/* TEAM GRID */}
+      {/* =========================
+          TEAM GRID
+      ========================== */}
       <section
         className="
           max-w-[1600px]
@@ -79,15 +94,19 @@ export default function Team() {
             typeof member.image === "string" &&
             member.image.trim().length > 0;
 
+          const hasLink =
+            typeof member.link === "string" &&
+            member.link.trim().length > 0;
+
           return (
             <Reveal
               key={member.name}
               delay={(index % 3) * 0.07}
               className="overflow-visible"
             >
-              {/* =============================
-                  NETFLIX STYLE OUTER WRAPPER
-              ============================== */}
+              {/* =========================
+                  NETFLIX STYLE WRAPPER
+              ========================== */}
               <motion.div
                 initial={{
                   opacity: 0,
@@ -109,18 +128,40 @@ export default function Team() {
                   scale: 1.08,
                   y: -12,
                 }}
-                className="
+                onClick={() => openMemberLink(member)}
+                onKeyDown={(e) => {
+                  if (!hasLink) return;
+
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    openMemberLink(member);
+                  }
+                }}
+                role={hasLink ? "link" : undefined}
+                tabIndex={hasLink ? 0 : undefined}
+                aria-label={
+                  hasLink
+                    ? `Open ${member.name} portfolio`
+                    : undefined
+                }
+                className={`
                   group
                   relative
                   overflow-visible
-
                   lg:hover:z-[100]
-                "
+                  outline-none
+
+                  ${
+                    hasLink
+                      ? "cursor-pointer focus-visible:ring-2 focus-visible:ring-[#FF9D00] focus-visible:ring-offset-4 focus-visible:ring-offset-[#0A0A0A] rounded-[20px]"
+                      : ""
+                  }
+                `}
                 data-testid={`team-member-${index}`}
               >
-                {/* =============================
+                {/* =========================
                     PHOTO CARD
-                ============================== */}
+                ========================== */}
                 <div
                   className="
                     relative
@@ -142,7 +183,10 @@ export default function Team() {
                     lg:group-hover:shadow-[0_20px_70px_rgba(0,0,0,0.65)]
                   "
                 >
-                  {/* REAL IMAGE - ORIGINAL COLOR */}
+                  {/* =========================
+                      REAL IMAGE
+                      ORIGINAL COLOR ONLY
+                  ========================== */}
                   {hasImage ? (
                     <motion.img
                       src={member.image}
@@ -164,7 +208,9 @@ export default function Team() {
                       }}
                     />
                   ) : (
-                    /* NO IMAGE */
+                    /* =========================
+                        NO IMAGE PLACEHOLDER
+                    ========================== */
                     <div
                       className="
                         absolute
@@ -175,6 +221,7 @@ export default function Team() {
                         bg-[#111111]
                       "
                     >
+                      {/* Orange glow */}
                       <div
                         className="
                           absolute
@@ -186,6 +233,7 @@ export default function Team() {
                         "
                       />
 
+                      {/* User icon */}
                       <div
                         className="
                           relative
@@ -201,6 +249,10 @@ export default function Team() {
                           flex
                           items-center
                           justify-center
+                          transition-all
+                          duration-300
+                          group-hover:border-[#FF9D00]
+                          group-hover:bg-[#FF9D00]/15
                         "
                       >
                         <UserRound
@@ -217,8 +269,10 @@ export default function Team() {
                     </div>
                   )}
 
-                  {/* ONLY BOTTOM TEXT READABILITY
-                      Photo colors are NOT changed */}
+                  {/* =========================
+                      BOTTOM GRADIENT ONLY
+                      IMAGE COLOR NOT CHANGED
+                  ========================== */}
                   <div
                     className="
                       absolute
@@ -233,7 +287,9 @@ export default function Team() {
                     "
                   />
 
-                  {/* MEMBER NUMBER */}
+                  {/* =========================
+                      MEMBER NUMBER
+                  ========================== */}
                   <div
                     className="
                       absolute
@@ -257,7 +313,46 @@ export default function Team() {
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
-                  {/* NORMAL TEXT */}
+                  {/* Portfolio badge */}
+                  {hasLink && (
+                    <div
+                      className="
+                        absolute
+                        top-4
+                        left-4
+                        z-20
+
+                        flex
+                        items-center
+                        gap-1.5
+
+                        px-3
+                        py-1.5
+
+                        rounded-full
+
+                        bg-[#FF9D00]
+                        text-[#0A0A0A]
+
+                        font-heading
+                        text-[9px]
+                        sm:text-[10px]
+                        font-semibold
+                        uppercase
+                        tracking-[0.15em]
+
+                        shadow-lg
+                      "
+                    >
+                      Portfolio
+
+                      <ArrowUpRight className="w-3 h-3" />
+                    </div>
+                  )}
+
+                  {/* =========================
+                      NORMAL CARD TEXT
+                  ========================== */}
                   <div
                     className="
                       absolute
@@ -278,6 +373,7 @@ export default function Team() {
                   >
                     <div className="w-10 h-[2px] bg-[#FF9D00] mb-3" />
 
+                    {/* NAME */}
                     <h3
                       className="
                         font-heading
@@ -291,6 +387,7 @@ export default function Team() {
                       {member.name}
                     </h3>
 
+                    {/* ROLE */}
                     <p
                       className="
                         font-heading
@@ -298,12 +395,13 @@ export default function Team() {
                         text-xs
                         sm:text-sm
                         mt-1.5
+                        leading-relaxed
                       "
                     >
                       {member.role}
                     </p>
 
-                    {/* Mobile Expertise */}
+                    {/* MOBILE EXPERTISE */}
                     {member.expertise && (
                       <p
                         className="
@@ -322,9 +420,10 @@ export default function Team() {
                   </div>
                 </div>
 
-                {/* =================================
-                    NETFLIX HOVER INFORMATION PANEL
-                ================================== */}
+                {/* =========================
+                    NETFLIX HOVER PANEL
+                    DESKTOP ONLY
+                ========================== */}
                 <div
                   className="
                     hidden
@@ -366,7 +465,7 @@ export default function Team() {
                     shadow-[0_28px_60px_rgba(0,0,0,0.65)]
                   "
                 >
-                  {/* SMALL ACCENT */}
+                  {/* Top accent */}
                   <div className="flex items-center gap-2 mb-3">
                     <span className="w-7 h-[2px] bg-[#FF9D00]" />
 
@@ -404,6 +503,7 @@ export default function Team() {
                       text-sm
                       font-semibold
                       mt-2
+                      leading-relaxed
                     "
                   >
                     {member.role}
@@ -424,7 +524,9 @@ export default function Team() {
                     </p>
                   )}
 
-                  {/* Decorative bottom */}
+                  {/* =========================
+                      PANEL BOTTOM
+                  ========================== */}
                   <div
                     className="
                       mt-4
@@ -445,21 +547,27 @@ export default function Team() {
                         text-white/35
                       "
                     >
-                      Creative Team
+                      {hasLink ? "View Portfolio" : "Creative Team"}
                     </span>
 
                     <span
-                      className="
-                        w-7
-                        h-7
+                      className={`
+                        w-8
+                        h-8
                         rounded-full
                         border
-                        border-white/15
                         flex
                         items-center
                         justify-center
-                        text-[#FF9D00]
-                      "
+                        transition-all
+                        duration-300
+
+                        ${
+                          hasLink
+                            ? "bg-[#FF9D00] border-[#FF9D00] text-black"
+                            : "border-white/15 text-[#FF9D00]"
+                        }
+                      `}
                     >
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
@@ -519,6 +627,7 @@ export default function Team() {
               / Careers
             </span>
 
+            {/* Decorative circle */}
             <div
               className="
                 absolute
@@ -526,28 +635,36 @@ export default function Team() {
                 h-56
                 md:w-72
                 md:h-72
+
                 rounded-full
                 border
                 border-black/10
+
                 -right-20
                 top-1/2
                 -translate-y-1/2
+
                 group-hover:scale-125
+
                 transition-transform
                 duration-700
               "
             />
 
+            {/* JOIN TEXT */}
             <h2
               className="
                 relative
                 z-10
+
                 font-display
                 uppercase
+
                 text-6xl
                 sm:text-5xl
                 md:text-6xl
                 xl:text-7xl
+
                 leading-[0.85]
               "
             >
@@ -558,6 +675,7 @@ export default function Team() {
               studio
             </h2>
 
+            {/* Bottom */}
             <div className="relative z-10 flex items-center justify-between">
               <span className="font-heading text-xs uppercase tracking-[0.2em]">
                 Work with us
@@ -567,8 +685,10 @@ export default function Team() {
                 className="
                   w-7
                   h-7
+
                   group-hover:translate-x-1
                   group-hover:-translate-y-1
+
                   transition-transform
                   duration-300
                 "

@@ -159,11 +159,12 @@ export const TEAM = [
     role: "Digital Marketing",
     image: "",
   },
-  {
-    name: "Anil Thakur",
-    role: "Software Developer",
-    image: "",
-  },
+{
+  name: "Anil Thakur",
+  role: "Software Developer",
+  image: "",
+  link: "https://anilthakur.vercel.app/",
+},
   {
     name: "Harsh Dubey",
     role: "Full Stack Developer",
